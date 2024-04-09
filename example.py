@@ -33,12 +33,12 @@ entities_content = chatmemory.get_entities_content(user_id)
 if entities_content:
     system_content += entities_content
 messages.append({"role": "assistant", "content": "よろしくお願いします。"})
-print("ちほ、anthropic haikuとチャット。no log")
+print("  anthropic haikuとチャット。")
 
 while True:
     # Add message that includes mid-term memory as the first user message at the 2nd tern
     chatmemory.set_archived_histories_message(user_id, messages)
-    u = input(" 浩一: ")
+    u = input(" You: ")
     if not u:
         break
     messages.append({"role": "user", "content": u})
@@ -50,7 +50,7 @@ while True:
         messages=messages
     )
     resp = message.content[0].text
-    print("  ちほc: ", resp)
+    print("  haiku: ", resp)
     messages.append({"role": "assistant", "content": resp})
     # Add user and assistant messages in this tern to the database
     chatmemory.add_histories(user_id, messages[-2:])
