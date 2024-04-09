@@ -97,11 +97,11 @@ class HistoryArchiver:
         # messages += [{"role": "user", "content": prompt}]
 
         try:
-            return json.loads(str(resp.content[0].input).replace("\'", "\""))["summarized_text"]
+            return json.loads(str(resp.content[0].text).replace("\'", "\""))["summarized_text"]
 
         except json.decoder.JSONDecodeError:
             logger.warning(f"Retry parsing JSON: {resp}")
-            jstr = str(resp.content[0].input).replace("\'", "\"").replace("\",\n}", "\"\n}")
+            jstr = str(resp.content[0].text).replace("\'", "\"").replace("\",\n}", "\"\n}")
             return json.loads(jstr)["summarized_text"]
 
         except Exception as ex:
