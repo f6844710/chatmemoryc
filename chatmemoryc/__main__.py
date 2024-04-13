@@ -15,7 +15,7 @@ def main():
     argparser = ArgumentParser(usage=usage)
     argparser.add_argument("--key", dest="api_key", help="ANTHROPIC API Key. Set here or environment variables with key 'ANTHROPIC_APIKEY'")
     argparser.add_argument("--host", dest="host", default="127.0.0.1", help="IP address to listen. Default is 127.0.0.1")
-    argparser.add_argument("--port", dest="port", default=8123, type=int, help="Port numbert to listen. Default is 8124")
+    argparser.add_argument("--port", dest="port", default=8124, type=int, help="Port numbert to listen. Default is 8124")
     args = argparser.parse_args()
 
     api_key = args.api_key or os.environ.get("ANTHROPIC_APIKEY")
