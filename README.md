@@ -15,7 +15,7 @@ Long-term and medium-term memories between you and chatbot💕
     ```
     You can set API Key in environment variables and use specific host and port. See `python -m chatmemoryc --help`.
 
-1. Make and start [example chatbot](https://github.com/uezo/chatmemory/blob/main/example.py) in another terminal.
+1. Make and start [example chatbot](https://github.com/f6844710/chatmemoryc/blob/main/example.py) in another terminal.
     ```bash
     $ python example.py
     ```
