@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="chatmemoryc",
-    version="0.1.4rc3",
+    version="0.1.4rc4",
     url="https://github.com/f6844710/chatmemoryc",
     author="pino",
     author_email="f6844710@nifty.com",
