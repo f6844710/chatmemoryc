@@ -1,7 +1,7 @@
 import os
 from argparse import ArgumentParser
 import logging
-from .server import ChatMemoryServer
+from server import ChatMemoryServer
 
 def main():
     logger = logging.getLogger()
