@@ -87,7 +87,7 @@ class HistoryArchiver:
         }, ]
 
         client = anthropic.Anthropic(api_key=self.api_key)
-        resp = client.beta.tools.messages.create(
+        resp = client.messages.create(
             model=self.model,
             messages=histories,
             max_tokens=2000,
@@ -154,7 +154,7 @@ class EntityExtractor:
         # prompt += "\nPlease provide the extracted entities in the following JSON format:\n```json\n{\n  \"entities\": [\n    {\"name\": \"entity_name\", \"value\": \"entity_value\"},\n    ...\n  ]\n}\n```"
 
         client = anthropic.Anthropic(api_key=self.api_key)
-        resp = client.beta.tools.messages.create(
+        resp = client.messages.create(
             model=self.model,
             messages=histories,
             max_tokens=2000,
